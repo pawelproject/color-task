@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ColorList from "./components/ColorList";
+import NewColorForm from "./components/NewColorForm";
+import "./Styles/App.css";
+import { ColorsContextProvider } from "./store/colors-context";
 
-function App() {
+import { FC } from "react";
+
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ColorsContextProvider>
+      <div className="App">
+        <NewColorForm />
+        <br />
+
+        <ColorList />
+      </div>
+    </ColorsContextProvider>
   );
-}
+};
 
 export default App;

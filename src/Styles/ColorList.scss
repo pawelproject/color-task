@@ -1,0 +1,19 @@
+.color-triangle {
+  width: 160px;
+  height: 15px;
+}
+
+.color-item {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.color-name {
+  text-align: center;
+}
+
+.delete-btn {
+  margin: 0 auto;
+}
